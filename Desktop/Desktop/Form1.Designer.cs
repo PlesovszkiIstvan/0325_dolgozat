@@ -30,7 +30,7 @@
         {
             this.kolcsonzokBox = new System.Windows.Forms.ListBox();
             this.konyvekBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.visszahozBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -41,6 +41,7 @@
             this.kolcsonzokBox.Name = "kolcsonzokBox";
             this.kolcsonzokBox.Size = new System.Drawing.Size(120, 420);
             this.kolcsonzokBox.TabIndex = 0;
+            this.kolcsonzokBox.SelectedValueChanged += new System.EventHandler(this.kolcsonzokBox_SelectedValueChanged);
             // 
             // konyvekBox
             // 
@@ -49,15 +50,17 @@
             this.konyvekBox.Name = "konyvekBox";
             this.konyvekBox.Size = new System.Drawing.Size(650, 225);
             this.konyvekBox.TabIndex = 1;
+            this.konyvekBox.SelectedIndexChanged += new System.EventHandler(this.konyvekBox_SelectedIndexChanged);
             // 
-            // button1
+            // visszahozBtn
             // 
-            this.button1.Location = new System.Drawing.Point(138, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Visszahozva";
-            this.button1.UseVisualStyleBackColor = true;
+            this.visszahozBtn.Enabled = false;
+            this.visszahozBtn.Location = new System.Drawing.Point(138, 243);
+            this.visszahozBtn.Name = "visszahozBtn";
+            this.visszahozBtn.Size = new System.Drawing.Size(75, 23);
+            this.visszahozBtn.TabIndex = 2;
+            this.visszahozBtn.Text = "Visszahozva";
+            this.visszahozBtn.UseVisualStyleBackColor = true;
             // 
             // closeBtn
             // 
@@ -75,7 +78,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.visszahozBtn);
             this.Controls.Add(this.konyvekBox);
             this.Controls.Add(this.kolcsonzokBox);
             this.Name = "Form1";
@@ -89,7 +92,7 @@
 
         private System.Windows.Forms.ListBox kolcsonzokBox;
         private System.Windows.Forms.ListBox konyvekBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button visszahozBtn;
         private System.Windows.Forms.Button closeBtn;
     }
 }
